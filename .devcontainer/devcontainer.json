@@ -1,0 +1,8 @@
+{
+  // gdal-r-python is large (~11 GB): the first start of a codespace is slow; a prebuild helps
+  "name": "ga-sar-ice",
+  "image": "ghcr.io/hypertidy/gdal-r-python:latest",
+  "postCreateCommand": "bash dea-overlay.sh dea",
+  "forwardPorts": [8888],
+  "hostRequirements": { "cpus": 4, "memory": "16gb" }
+}
